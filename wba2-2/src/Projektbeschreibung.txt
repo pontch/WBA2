@@ -15,7 +15,7 @@ synchrone Kommunikation:
 •	über das System können nach Abschluss eines Abos diesbezüglich alle vorhandenen 
 	Informationen abgerufen werden:
 	- Modul:
-      Veranstaltungszeitpunkt, Veranstaltungsraum, Dozent, Credits, Beschreibung, Übungen, ggf. Praktikum
+	  Veranstaltungszeitpunkt, Veranstaltungsraum, Dozent, Credits, Beschreibung, Übungen, ggf. Praktikum
 	- Dozent:
 	  Fachrichtungen, laufende/vergangene Veranstaltungen, Kontakt
 	- Semester:
