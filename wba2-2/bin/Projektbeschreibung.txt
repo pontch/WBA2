@@ -8,7 +8,7 @@ zum Beispiel anstehende Pflichttermine, werden per Newsticker an die Abonnenten 
 
 asynchrone Kommunikation:
 •	zu folgenden Angaben können Abos abgeschlossen werden: 
-		Modul, Dozent, Semester, Studiengang, Zeitraum (WS, SS)
+	Modul, Dozent, Semester, Studiengang, Zeitraum (WS, SS)
 •	die Art des abgeschlossenen Abos legt fest, welche Informationen per Newsticker 
 	versendet werden
 •	Dozenten können Neuigkeiten bekannt geben über die per Newsticker informiert wird
@@ -19,11 +19,11 @@ synchrone Kommunikation:
 	- Modul:		Veranstaltungszeitpunkt, Veranstaltungsraum, Dozent, Credits, 				
 					Beschreibung, Übungen, ggf. Praktikum
 	- Dozent:		Fachrichtungen, laufende/vergangene Veranstaltungen, Kontakt
-	- Semester		Modulübersicht, Praktika, Übungen, Prüfungsfristen/-zeitraum, Stundenplan
-	- Studiengang	Studienverlaufsplan, Prüfungsordnung, Beschreibung, Regelstudienzeit, 			
+	- Semester:		Modulübersicht, Praktika, Übungen, Prüfungsfristen/-zeitraum, Stundenplan
+	- Studiengang:	Studienverlaufsplan, Prüfungsordnung, Beschreibung, Regelstudienzeit, 			
 					Studienumfang, Events
-	- Zeitraum 		Übersicht Modulangebot, Prüfungszeitraum, Rückmeldefrist, Blockveranstaltungen
+	- Zeitraum:		Übersicht Modulangebot, Prüfungszeitraum, Rückmeldefrist, Blockveranstaltungen
 •	Dozenten können über das System Beiträge erstellen, speichern und editieren, z.B.:
-		Modulverlaufsplan, Beschreibung, Vorkenntnisse, Erwartungen, ähnliche Module, 
-		Teilnehmerzahl, Credits/Leistungsumfang, Pflichttermine
+	Modulverlaufsplan, Beschreibung, Vorkenntnisse, Erwartungen, ähnliche Module, Teilnehmerzahl, 
+	Credits/Leistungsumfang, Pflichttermine
 
