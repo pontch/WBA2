@@ -16,13 +16,13 @@ asynchrone Kommunikation:
 synchrone Kommunikation:
 •	über das System können nach Abschluss eines Abos diesbezüglich alle vorhandenen 
 	Informationen abgerufen werden:
-	- Modul:		Veranstaltungszeitpunkt, Veranstaltungsraum, Dozent, Credits, 				
-					Beschreibung, Übungen, ggf. Praktikum
-	- Dozent:		Fachrichtungen, laufende/vergangene Veranstaltungen, Kontakt
-	- Semester:		Modulübersicht, Praktika, Übungen, Prüfungsfristen/-zeitraum, Stundenplan
-	- Studiengang:	Studienverlaufsplan, Prüfungsordnung, Beschreibung, Regelstudienzeit, 			
-					Studienumfang, Events
-	- Zeitraum:		Übersicht Modulangebot, Prüfungszeitraum, Rückmeldefrist, Blockveranstaltungen
+	- Modul: Veranstaltungszeitpunkt, Veranstaltungsraum, Dozent, Credits, 				
+	         Beschreibung, Übungen, ggf. Praktikum
+	- Dozent: Fachrichtungen, laufende/vergangene Veranstaltungen, Kontakt
+	- Semester: Modulübersicht, Praktika, Übungen, Prüfungsfristen/-zeitraum, Stundenplan
+	- Studiengang: Studienverlaufsplan, Prüfungsordnung, Beschreibung, Regelstudienzeit, 			
+                   Studienumfang, Events
+	- Zeitraum: Übersicht Modulangebot, Prüfungszeitraum, Rückmeldefrist, Blockveranstaltungen
 •	Dozenten können über das System Beiträge erstellen, speichern und editieren, z.B.:
 	Modulverlaufsplan, Beschreibung, Vorkenntnisse, Erwartungen, ähnliche Module, Teilnehmerzahl, 
 	Credits/Leistungsumfang, Pflichttermine
