@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dozenten xmlns="http://www.example.org/dozent">
+	<dozent>
+		<name>Prof. Dr. Kristian Fischer</name>
+		<steckbrief>
+			<info titel="Lehrgebiet">Informatik, Schwerpunkt Multimediasysteme und Anwendungsentwicklung</info>
+			<info titel="Schwerpunkte">Multimediasysteme und Anwendungsentwicklung</info>
+			<info titel="Anschrift">Steinmüllerallee 1, 51643 Gummersbach</info>
+			<info titel="Raum">3241</info>
+			<info titel="Telefon">+49 2261 8196 6297</info>
+			<info titel="Fax">+49 2261 8196 6666</info>
+			<info titel="URL">http://www.gm.fh-koeln.de/~fischer/</info>
+			<info titel="eMail">fischer at gm.fh-koeln.de</info>
+			<info titel="Sprechzeit">dienstags 11:15 - 12:00 Uhr</info>
+			<info titel="Laufende Veranstaltungen">Web-basierte Anwendungen 2: Verteilte Systeme</info>
+		</steckbrief>
+		<newsticker titel="Newsticker">
+			<eintrag datum="06.05.2013">Vorlesung fällt aus!</eintrag>
+			<eintrag datum="23.04.2013">Bis zum 26.04.2013 müssen die Aufgaben der 1. Phase hochgeladen werden.</eintrag>
+			<eintrag datum="10.04.2013">Der nächste Praktikumstermin ist keine Pflicht, sondern dient nur der Beratung! Dazu können 
+			Termine bei den Tutoren vereinbart werden.</eintrag>
+			<eintrag datum="14.03.2013">WBA2 startet am 15.05.2013! Oraganisatorische Sachen werden in der ersten Vorlesung besprochen.</eintrag>
+		</newsticker>
+	</dozent>
+</dozenten>
