@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<modul>
-	<titel>Web-basierte Anwendungen 2: Verteilte Systeme</titel>
-	<status>Pflichtfach</status>
-	<credits>5 ECTS-P</credits>
-	<semester>4 SWS</semester>
-	<termin>jährlich angeboten</termin>
+<module xmlns="http://www.example.org/meilenstein1">
+	<modul>
+		<titel>Web-basierte Anwendungen 2: Verteilte Systeme</titel>
+		<status>Pflichtfach</status>
+		<credits>5 ECTS-P</credits>
+		<semester>4 SWS</semester>
+		<termin>jährlich angeboten</termin>
+		
+		<beschreibung>
+			<thema>
+				<text titel="Dozent">Prof. Dr. Kristian Fischer </text>
+			</thema>
+			<thema>
+				<text titel="Ziele">Die Studierenden sollen in der Lage sein, alternative Architekturen für Informationssysteme 
+				im Web zu identifizieren, deren Eigenschaften zu benennen und sie gegeneinander abzugrenzen.
+				Dazu sollen die Studierenden im Einzelnen:</text>
+				<aufzaehlung>
+					<punkt>* auf der Basis der Kenntnis wesentlicher klassischer Middelewaresysteme die grundlegenden Web Services Protokolle 
+					benennen, einordnen und diskutieren können,</punkt>
+					<punkt>* eine geeignete Vorgehensweise zum Entwurf eines dienstorientierten Informationssystems im Web wählen können,</punkt>
+					<punkt>* die praktischen Herausforderungen einer Umsetzung anhand eines eigenen Miniprojekts meistern können,</punkt>
+					<punkt>* die Bedeutung der Modellierung von Daten in offenen Umgebungen benennen können und die Eigenschaften der 
+					Datenmodellierung in XML bzw. in RDF diskutieren können,</punkt>
+					<punkt>* die relevanten Standards und Architekturen für stream-orientierte interpersonale Kommunikation im Web kennen und 
+					abgrenzen können.</punkt>
+				</aufzaehlung>
+			</thema>
+			<thema>
+				<text titel="Lehrinhalte" />
+				<aufzaehlung>
+					<punkt>Modellierung von Daten für die Kommunikation im Web: Datenkommunikation in offenen Umgebungen; Prinzip von 
+					Auszeichnungssprachen; Datenmodellierung mit XML und XML Schemasprachen; Datenmodellierung mit RDF und RDFS </punkt>
+					<punkt>Infrastruktur und Standards: klassische Middlewaresysteme: RPC,CORBA, nachrichtenorientierte Middleware; Standards 
+					und Standardisierung im Internet; quelloffene vs. proprietäre Software</punkt>
+					<punkt>Dienstorientierte Architektur: Basisstandards: SOAP, WSDL, UDDI; Dienstkomposition; Transaktionen; Entwurfsprinzipen: 
+					top-down vs. bottom-up, Kohäsion, Granularität</punkt>
+					<punkt>Kommunikationsarchitekturen: Streaming Protokolle: RTP, RSVP, RTCP; Dienstgüte; Signalisierungsprotokolle: SIP, H.323; 
+					Präsenzarchitekturen</punkt>
+				</aufzaehlung>
+			</thema>
+			<thema>
+				<text titel="Lehrmethode">Vorlesung, Übung </text>
+			</thema>
+			<thema>
+				<text titel="Vorraussetzungen">Datenbanken, Softwaretechnik I, Grundlagen von Multimedia Systemen, Grundkenntnisse der 
+				objektorientierten Programmierung, Grundkenntnisse der Kommunikationstechnik, Netzbasierte Anwendungen </text>
+			</thema>
+			<thema>
+				<text titel="Veranstaltungsort">Raum 3101</text>
+			</thema>
+		</beschreibung>
 	
-	<beschreibung>
-		<thema>
-			<text titel="Dozent">Prof. Dr. Kristian Fischer </text>
-		</thema>
-		<thema>
-			<text titel="Ziele">Die Studierenden sollen in der Lage sein, alternative Architekturen für Informationssysteme 
-			im Web zu identifizieren, deren Eigenschaften zu benennen und sie gegeneinander abzugrenzen.
-			Dazu sollen die Studierenden im Einzelnen:</text>
-			<aufzaehlung>
-				<punkt>* auf der Basis der Kenntnis wesentlicher klassischer Middelewaresysteme die grundlegenden Web Services Protokolle 
-				benennen, einordnen und diskutieren können,</punkt>
-				<punkt>* eine geeignete Vorgehensweise zum Entwurf eines dienstorientierten Informationssystems im Web wählen können,</punkt>
-				<punkt>* die praktischen Herausforderungen einer Umsetzung anhand eines eigenen Miniprojekts meistern können,</punkt>
-				<punkt>* die Bedeutung der Modellierung von Daten in offenen Umgebungen benennen können und die Eigenschaften der 
-				Datenmodellierung in XML bzw. in RDF diskutieren können,</punkt>
-				<punkt>* die relevanten Standards und Architekturen für stream-orientierte interpersonale Kommunikation im Web kennen und 
-				abgrenzen können.</punkt>
-			</aufzaehlung>
-		</thema>
-		<thema>
-			<text titel="Lehrinhalte" />
-			<aufzaehlung>
-				<punkt>Modellierung von Daten für die Kommunikation im Web: Datenkommunikation in offenen Umgebungen; Prinzip von 
-				Auszeichnungssprachen; Datenmodellierung mit XML und XML Schemasprachen; Datenmodellierung mit RDF und RDFS </punkt>
-				<punkt>Infrastruktur und Standards: klassische Middlewaresysteme: RPC,CORBA, nachrichtenorientierte Middleware; Standards 
-				und Standardisierung im Internet; quelloffene vs. proprietäre Software</punkt>
-				<punkt>Dienstorientierte Architektur: Basisstandards: SOAP, WSDL, UDDI; Dienstkomposition; Transaktionen; Entwurfsprinzipen: 
-				top-down vs. bottom-up, Kohäsion, Granularität</punkt>
-				<punkt>Kommunikationsarchitekturen: Streaming Protokolle: RTP, RSVP, RTCP; Dienstgüte; Signalisierungsprotokolle: SIP, H.323; 
-				Präsenzarchitekturen</punkt>
-			</aufzaehlung>
-		</thema>
-		<thema>
-			<text titel="Lehrmethode">Vorlesung, Übung </text>
-		</thema>
-		<thema>
-			<text titel="Vorraussetzungen">Datenbanken, Softwaretechnik I, Grundlagen von Multimedia Systemen, Grundkenntnisse der 
-			objektorientierten Programmierung, Grundkenntnisse der Kommunikationstechnik, Netzbasierte Anwendungen </text>
-		</thema>
-		<thema>
-			<text titel="Veranstaltungsort">Raum 3101</text>
-		</thema>
-	</beschreibung>
-
-	<newsticker titel="Newsticker">
-		<eintrag datum="06.05.2013">Vorlesung fällt aus!</eintrag>
-		<eintrag datum="23.04.2013">Bis zum 26.04.2013 müssen die Aufgaben der 1. Phase hochgeladen werden.</eintrag>
-		<eintrag datum="10.04.2013">Der nächste Praktikumstermin ist keine Pflicht, sondern dient nur der Beratung! Dazu können 
-		Termine bei den Tutoren vereinbart werden. </eintrag>
-		<eintrag datum="14.03.2013">WBA2 startet am 15.05.2013! Oraganisatorische Sachen werden in der ersten Vorlesung besprochen.</eintrag>
-	</newsticker>
-
-</modul>
+		<newsticker titel="Newsticker">
+			<eintrag datum="06.05.2013">Vorlesung fällt aus!</eintrag>
+			<eintrag datum="23.04.2013">Bis zum 26.04.2013 müssen die Aufgaben der 1. Phase hochgeladen werden.</eintrag>
+			<eintrag datum="10.04.2013">Der nächste Praktikumstermin ist keine Pflicht, sondern dient nur der Beratung! Dazu können 
+			Termine bei den Tutoren vereinbart werden.</eintrag>
+			<eintrag datum="14.03.2013">WBA2 startet am 15.05.2013! Oraganisatorische Sachen werden in der ersten Vorlesung besprochen.</eintrag>
+		</newsticker>
+	</modul>
+</module>
