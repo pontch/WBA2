@@ -6,7 +6,15 @@
 				<xs:element name="modul" minOccurs="1" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="titel" type="xs:string"/>
+							<xs:element name="titel">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="kuerzel" type="xs:string" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
 							<xs:element name="status" type="xs:string"/>
 							<xs:element name="credits" type="xs:string"/>
 							<xs:element name="semester" type="xs:string"/>
@@ -42,11 +50,13 @@
 							<xs:element name="newsticker">
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="eintrag" minOccurs="1" maxOccurs="unbounded">
+										<xs:element name="eintrag" minOccurs="0" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:simpleContent>
 													<xs:extension base="xs:string">
-														<xs:attribute name="datum" type="xs:string"/>
+														<xs:attribute name="datum" type="xs:date"/>
+														<xs:attribute name="verfasser" type="xs:string"/>
+														<xs:attribute name="modul" type="xs:string"/>
 													</xs:extension>
 												</xs:simpleContent>
 											</xs:complexType>
