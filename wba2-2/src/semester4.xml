@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<mi_semester xmlns="http://www.example.org/semester">
+		<semester>
+			<zeitpunkt kuerzel="SS">Studiensemester 4</zeitpunkt>
+			<modulplan>
+				<modul credits="5 ECTS-P" aufwand="4 SWS" termin="jährlich angeboten">
+					<titel>Betriebssysteme und verteilte Systeme</titel>
+					<dozent>Prof. Dr. Horst Stenzel</dozent>
+				</modul>
+				<modul credits="5 ECTS-P" aufwand="4 SWS" termin="jährlich angeboten">
+					<titel>Mensch-Computer Interaktion</titel>
+					<dozent>Prof. Dr. Gerhard Hartmann</dozent>
+				</modul>
+				<modul credits="5 ECTS-P" aufwand="4 SWS" termin="jährlich angeboten">
+					<titel>Softwaretechnik</titel>
+					<dozent>Prof. Dr. Mario Winter</dozent>
+				</modul>
+				<modul credits="5 ECTS-P" aufwand="4 SWS" termin="jährlich angeboten">
+					<titel>Web-basierte Anwendungen 2: Verteilte Systeme</titel>
+					<dozent>Prof. Dr. Kristian Fischer</dozent>
+				</modul>
+				<modul credits="5 ECTS-P" aufwand="4 SWS" termin="jährlich angeboten">
+					<titel>WPF Veranstaltung I</titel>
+					<dozent>Alle Professorinnen und Professoren des Instituts für Informatik</dozent>
+				</modul>
+				<modul credits="5 ECTS-P" aufwand="4 SWS" termin="jährlich angeboten">
+					<titel>Grundlagen BWL </titel>
+					<dozent>Prof. Dr. Matina Behr</dozent>
+				</modul>
+			</modulplan>
+		</semester>
+	</mi_semester>
