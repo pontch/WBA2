@@ -6,7 +6,15 @@
 				<xs:element name="student">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="name" type="xs:string" />
+							<xs:element name="name">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="kennung" type="xs:string" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
 							<xs:element name="studiengang">
 								<xs:complexType>
 									<xs:attribute name="bezeichnung" type="xs:string" />
@@ -16,6 +24,11 @@
 							<xs:element name="semester">
 								<xs:complexType>
 									<xs:attribute name="anzahl" type="xs:int" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="email">
+								<xs:complexType>
+									<xs:attribute name="adresse" type="xs:string" />
 								</xs:complexType>
 							</xs:element>
 							<xs:element name="abos">
@@ -43,24 +56,6 @@
 													<xs:element name="dozent" maxOccurs="unbounded" />
 												</xs:sequence>
 												<xs:attribute name="titel" type="xs:string" />
-											</xs:complexType>
-										</xs:element>
-									</xs:sequence>
-									<xs:attribute name="titel" type="xs:string" />
-								</xs:complexType>
-							</xs:element>
-							<xs:element name="newsticker">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="eintrag" minOccurs="0" maxOccurs="unbounded">
-											<xs:complexType>
-												<xs:simpleContent>
-													<xs:extension base="xs:string">
-														<xs:attribute name="datum" type="xs:date"/>
-														<xs:attribute name="verfasser" type="xs:string"/>
-														<xs:attribute name="modul" type="xs:string"/>
-													</xs:extension>
-												</xs:simpleContent>
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>

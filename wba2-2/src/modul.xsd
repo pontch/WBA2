@@ -10,6 +10,8 @@
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="xs:string">
+											<xs:attribute name="kategorie" type="xs:string" />
+											<xs:attribute name="id" type="xs:integer" />
 											<xs:attribute name="kuerzel" type="xs:string" />
 										</xs:extension>
 									</xs:simpleContent>
@@ -63,6 +65,17 @@
 										</xs:element>
 									</xs:sequence>
 									<xs:attribute name="titel" type="xs:string" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="abonnenten">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="abonnent" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="name" type="xs:string" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>

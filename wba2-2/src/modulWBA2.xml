@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module xmlns="http://www.example.org/modul">
 	<modul>
-		<titel kuerzel="WBA2">Web-basierte Anwendungen 2: Verteilte Systeme</titel>
+		<titel kategorie="modul" id="1" kuerzel="WBA2">Web-basierte Anwendungen 2: Verteilte Systeme</titel>
 		<status>Pflichtfach</status>
 		<credits>5 ECTS-P</credits>
 		<semester>4 SWS</semester>
@@ -50,7 +50,6 @@
 				<text titel="Veranstaltungsort">Raum 3101</text>
 			</thema>
 		</beschreibung>
-	
 		<newsticker titel="Newsticker">
 			<eintrag datum="2013-05-06" verfasser="Prof. Dr. Kristian Fischer" modul="WBA2">Vorlesung fällt aus!</eintrag>
 			<eintrag datum="2013-04-23" verfasser="Prof. Dr. Kristian Fischer" modul="WBA2">Bis zum 26.04.2013 müssen die Aufgaben der 1. Phase hochgeladen werden.</eintrag>
@@ -58,5 +57,8 @@
 			Termine bei den Tutoren vereinbart werden.</eintrag>
 			<eintrag datum="2013-03-14" verfasser="Prof. Dr. Kristian Fischer" modul="WBA2">WBA2 startet am 15.05.2013! Oraganisatorische Sachen werden in der ersten Vorlesung besprochen.</eintrag>
 		</newsticker>
+		<abonnenten>
+			<abonnent name="Daniela Kucharczyk" />
+		</abonnenten>
 	</modul>
 </module>

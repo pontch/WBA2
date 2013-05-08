@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<studenten xmlns="http://www.example.org/student">
 		<student>
-			<name>Daniela Kucharczyk</name>
+			<name kennung="mi1059">Daniela Kucharczyk</name>
 			<studiengang bezeichnung="Medieninformatik" kuerzel="MI" />
 			<semester anzahl="6"/>
+			<email adresse="daniela.kucharczyk@gmx.de" />
 			<abos titel="Abonnement">
 				<module titel="Module:">
 					<modul kuerzel="WBA2">Web-basierte Anwendungen 2: Verteilte Systeme</modul>
@@ -13,20 +14,5 @@
 					<dozent>Prof. Dr. Wolfgang Konen</dozent>
 				</dozenten>
 			</abos>
-			<newsticker titel="Newsticker">
-				<eintrag datum="2013-05-06" verfasser="Prof. Dr. Kristian Fischer" modul="WBA2">Vorlesung fällt aus!</eintrag>
-				<eintrag datum="2013-04-04" verfasser="Prof. Dr. Wolfgang Konen" modul="MA2">Die Ergebnisse aller Klausuren AI/MI/TI 
-				vom 12.03.2013 (HTM / HTM-Detail) sind da!</eintrag>
-				<eintrag datum="2013-04-23" verfasser="Prof. Dr. Kristian Fischer" modul="WBA2">Bis zum 26.04.2013 müssen die 
-				Aufgaben der 1. Phase hochgeladen werden.</eintrag>
-				<eintrag datum="2013-04-10" verfasser="Prof. Dr. Kristian Fischer" modul="WBA2">Der nächste Praktikumstermin 
-				ist keine Pflicht, sondern dient nur der Beratung! Dazu können Termine bei den Tutoren vereinbart werden.</eintrag>
-				<eintrag datum="2013-03-18" verfasser="Prof. Dr. Wolfgang Konen" modul="MA2">Am Mittwoch, 20.03.2013, 11 Uhr, 0.401, 
-				ist Pflichttermin Einführung MA2-Praktikum für alle, die an diesem MA2-Praktikum teilnehmen wollen (!)</eintrag>
-				<eintrag datum="2013-03-14" verfasser="Prof. Dr. Kristian Fischer" modul="WBA2">WBA2 startet am 15.05.2013! 
-				Oraganisatorische Sachen werden in der ersten Vorlesung besprochen.</eintrag>
-				<eintrag datum="2013-02-28" verfasser="Prof. Dr. Wolfgang Konen" modul="MA2">Klausurabgrenzung zur Klausur 12.03.2013. 
-				Viel Erfolg!</eintrag>
-		</newsticker>
 		</student>
 	</studenten>

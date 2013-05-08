@@ -6,8 +6,48 @@
 				<xs:element name="dozent">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="name"/>
-							<xs:element name="steckbrief">
+							<xs:element name="titel">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="kategorie" type="xs:string" />
+											<xs:attribute name="id" type="xs:integer" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>	
+							<xs:element name="adresse">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="anschrift" type="xs:string" />
+										<xs:element name="raum">
+											<xs:complexType>
+												<xs:attribute name="titel" type="xs:string"/>
+												<xs:attribute name="nummer" type="xs:int" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="tel">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nummer" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:attribute name="titel" type="xs:string" />
+															<xs:attribute name="nr" type="xs:string" />
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="email">
+											<xs:complexType>
+												<xs:attribute name="adresse" type="xs:string" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="titel" type="xs:string" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="lehre">
 								<xs:complexType>
 									<xs:sequence>
 										<xs:element name="info" minOccurs="1" maxOccurs="unbounded">
@@ -54,6 +94,17 @@
 										</xs:element>
 									</xs:sequence>
 									<xs:attribute name="titel" type="xs:string" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="abonnenten">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="abonnent" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="name" type="xs:string" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
