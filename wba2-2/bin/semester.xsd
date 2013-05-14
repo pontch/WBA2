@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/semester" elementFormDefault="qualified">
+	<xs:element name="mi_semester">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="semester">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="zeitpunkt">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="kuerzel" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="modulplan">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="modul" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="titel" type="xs:string" />
+													<xs:element name="dozent" type="xs:string" />
+												</xs:sequence>
+												<xs:attribute name="credits" type="xs:string"/>
+												<xs:attribute name="aufwand" type="xs:string" />
+												<xs:attribute name="termin" type="xs:string" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
