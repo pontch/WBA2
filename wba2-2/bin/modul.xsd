@@ -19,7 +19,7 @@
 							</xs:element>
 							<xs:element name="status" type="xs:string"/>
 							<xs:element name="credits" type="xs:string"/>
-							<xs:element name="semester" type="xs:string"/>
+							<xs:element name="aufwand" type="xs:string"/>
 							<xs:element name="termin" type="xs:string"/>
 							<xs:element name="beschreibung">
 								<xs:complexType>
