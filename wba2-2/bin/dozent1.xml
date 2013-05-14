@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dozenten xmlns="http://www.example.org/dozent">
-	<dozent>
-		<titel kategorie="dozent" id="1">Prof. Dr. Kristian Fischer</titel>
+	<dozent id="1">
+		<titel kategorie="dozent" >Prof. Dr. Kristian Fischer</titel>
 		<adresse titel="Adresse">
 			<anschrift>Steinmüllerallee 1, 51643 Gummersbach</anschrift>
 			<raum titel="Raum" nummer="3241" />

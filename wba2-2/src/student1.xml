@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<studenten xmlns="http://www.example.org/student">
-		<student>
+		<student id="1">
 			<name kennung="mi1059">Daniela Kucharczyk</name>
 			<studiengang bezeichnung="Medieninformatik" kuerzel="MI" />
 			<semester anzahl="6"/>
