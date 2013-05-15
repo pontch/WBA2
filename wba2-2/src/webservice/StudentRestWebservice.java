@@ -1,7 +1,6 @@
 package webservice;
 
 import java.io.FileReader;
-import java.io.FileWriter;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -27,17 +26,11 @@ public class StudentRestWebservice
 {
 	private String xmlPath = "/student1.xml";
 	
-	
-	
-	/**Alle Studenten die zu einem bestimmten Dozent gehoeren
-	 * 
-	 * @param Eine eindeutige id
-	 * @return Studenten
-	 */
 	@GET
 	@Path("/studenten/{id}")
 	@Produces("application/xml")
-	public Studenten getQuery(@QueryParam("id") int id)
+	
+	public Studenten getOne(@PathParam("id") int id)
 	{
 		Studenten student = new Studenten();
 		
