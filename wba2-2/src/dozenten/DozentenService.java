@@ -26,17 +26,38 @@ public class DozentenService {
 			
 			JAXBContext jc = JAXBContext.newInstance(Dozenten.class);
 	        Unmarshaller unmarshaller = jc.createUnmarshaller();
-	        Dozenten dozenten = (Dozenten) unmarshaller.unmarshal(new File("/Users/Butterfly/git/wba2_phase1/wba2-2/src/dozent1.xml"));
+	        Dozenten dozent = (Dozenten) unmarshaller.unmarshal(new File("/Users/Butterfly/git/wba2_phase1/wba2-2/src/dozent1.xml"));
 	            
-	         	System.out.println("Name: " + dozenten.getDozent().get(id).getTitel());
+	        	//zur Person
+	         	System.out.println("Name: " + dozent.getDozent().get(id).getTitel());
 	            System.out.println("Adresse: \n");
-	            System.out.println("" + dozenten.getDozent().get(id).getAdresse().anschrift);
-	            System.out.println(dozenten.getDozent().get(id).getAdresse().getRaum().titel + " " + dozenten.getDozent().get(id).getAdresse().getRaum().nummer);
-	            System.out.println("Telefon/Fax: " + dozenten.getDozent().get(id).getAdresse().getTel().getNummer().get(1));
-	            System.out.println("" + dozenten.getDozent().get(id).getAdresse().email);    
+	            System.out.println("" + dozent.getDozent().get(id).getAdresse().anschrift);
+	            System.out.println(dozent.getDozent().get(id).getAdresse().getRaum().titel + " " + dozent.getDozent().get(id).getAdresse().getRaum().nummer);
+	            System.out.println("Telefon/Fax: " + dozent.getDozent().get(id).getAdresse().getTel().getNummer().get(1));
+	            System.out.println("" + dozent.getDozent().get(id).getAdresse().email);    
 
+	            //Lehre
 	            System.out.println("Lehre: \n");
+	            System.out.println("Lehrgebiet: " + dozent.getDozent().get(id).getLehre().lehrgebiet);
+	            System.out.println("Schwerpunkte: " + dozent.getDozent().get(id).getLehre().schwerpunkte);
+	            System.out.println("URL: " + dozent.getDozent().get(id).getLehre().url);
+	            System.out.println("Sprechzeiten: " + dozent.getDozent().get(id).getLehre().sprechzeit);
 	            
+	            for(int i=0; i<dozent.getDozent().get(id).getLehre().getVeranstaltungen().getList().size(); i++){
+	            	System.out.println("" + dozent.getDozent().get(id).getLehre().getVeranstaltungen().getList().get(i).getKuerzel() + " - " + dozent.getDozent().get(id).getLehre().getVeranstaltungen().getList().get(i).value);
+	            }
+	            	
+	            //News
+	            if(dozent.getDozent().get(id).getNewsticker().eintrag != null){
+	            	for(int k=0; k<dozent.getDozent().get(id).getNewsticker().getEintrag().size(); k++ )
+	            	{
+	            		System.out.println("Datum: " + dozent.getDozent().get(id).getNewsticker().getEintrag().get(k).datum);
+	            		System.out.println("Verfasser: " + dozent.getDozent().get(id).getNewsticker().getEintrag().get(k).verfasser);
+	            		System.out.println("Modul: " + dozent.getDozent().get(id).getNewsticker().getEintrag().get(k).modul);
+	            		System.out.println("News: " + dozent.getDozent().get(id).getNewsticker().getEintrag().get(k).text);
+	            	}
+	            }
+	           
 
 		}
 		
