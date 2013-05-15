@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <dozenten xmlns="http://www.example.org/dozent">
 	<dozent id="1">
 		<titel kategorie="dozent" >Prof. Dr. Kristian Fischer</titel>
@@ -12,11 +12,11 @@
 			<email adresse="fischer at gm.fh-koeln.de" />
 		</adresse>
 		<lehre>
-			<info titel="Lehrgebiet">Informatik, Schwerpunkt Multimediasysteme und Anwendungsentwicklung</info>
-			<info titel="Schwerpunkte">Multimediasysteme und Anwendungsentwicklung</info>
-			<info titel="URL">http://www.gm.fh-koeln.de/~fischer/</info>
-			<info titel="Sprechzeit">dienstags 11:15 - 12:00 Uhr</info>
-			<veranstaltungen titel="Laufende Veranstaltungen">
+			<lehrgebiet>Informatik, Schwerpunkt Multimediasysteme und Anwendungsentwicklung</lehrgebiet>
+			<schwerpunkte>Multimediasysteme und Anwendungsentwicklung</schwerpunkte>
+			<url>http://www.gm.fh-koeln.de/~fischer/</url>
+			<sprechzeit>dienstags 11:15 - 12:00 Uhr</sprechzeit>
+			<veranstaltungen>
 				<list kuerzel="WBA2">Web-basierte Anwendungen 2: Verteilte Systeme</list>
 			</veranstaltungen>
 		</lehre>

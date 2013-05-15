@@ -3,7 +3,7 @@
 	<xs:element name="dozenten">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="dozent">
+				<xs:element name="dozent" minOccurs="1" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="titel">
@@ -49,15 +49,10 @@
 							<xs:element name="lehre">
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="info" minOccurs="1" maxOccurs="unbounded">
-											<xs:complexType>
-												<xs:simpleContent>
-													<xs:extension base="xs:string">
-														<xs:attribute name="titel" type="xs:string" />
-													</xs:extension>
-												</xs:simpleContent>
-											</xs:complexType>
-										</xs:element>
+										<xs:element name="lehrgebiet"/>
+										<xs:element name="schwerpunkte"/>
+										<xs:element name="url"/>
+										<xs:element name="sprechzeit"/>
 										<xs:element name="veranstaltungen">
 											<xs:complexType>
 												<xs:sequence>
