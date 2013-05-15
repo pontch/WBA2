@@ -1,82 +1,46 @@
 package webservice;
 
-import java.io.FileReader;
+import java.io.File;
+import java.io.FileNotFoundException;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
+import javax.ws.rs.*;
 import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Marshaller;
+import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
 import dozenten.Dozenten;
 import dozenten.Dozenten.Dozent;
+import dozenten.ObjectFactory;
 
-@Path("/classDozent")
+@Path ("/dozenten")
 public class DozentRestWebservice {
 
-	private String xmlPath ="/dozenten1.xml";
+	@GET
+	@Produces("application/xml")
+	public Dozenten getAll() throws JAXBException, FileNotFoundException
+	{
+		ObjectFactory ob = new ObjectFactory();
+		Dozenten dozent = ob.createDozenten();
+		JAXBContext context = JAXBContext.newInstance(Dozenten.class);
+		Unmarshaller um = context.createUnmarshaller();
+		dozent = (Dozenten) um.unmarshal(new File("/Users/Butterfly/git/wba2_phase1/wba2-2/src/dozent1.xml"));
+		
+		return dozent;
+	}
 	
-	/**Dozent laden
-	 * 
-	 * @param id Eine ID des Dozenten der zurückgegeben werden soll
-	 * @return Ein Dozent
-	 */
 	@GET
 	@Path("/dozenten/{id}")
 	@Produces("application/xml")
-	public Dozenten getOne(@PathParam("id") int id){
-		
-		Dozenten dozenten = new Dozenten();
-		
-		try
-		{
-			JAXBContext context = JAXBContext.newInstance(Dozenten.class);
-			Unmarshaller um = context.createUnmarshaller();
-			dozenten =(Dozenten)um.unmarshal(new FileReader(xmlPath));
-			Dozenten dozent = new Dozenten();
-			
-			for(Dozent temp : dozenten.getDozent())
-			{
-				if(id == temp.getId())
-				{
-					dozent.getDozent().add(temp);
-					return dozent;
-				}
-			}
-		}
-		catch(Exeption e)
-		{
-			System.out.println("ERROR: " + e.getMessage()); System.exit(-1);
-		}
-		return null;
-	}
-	
-	/**Alle Dozenten anfordern
-	 * 
-	 * @return Alle Dozenten
-	 */
-	@GET
-	@Produces("application/xml")
-	public Dozenten getAll()
+	public Dozenten getOne(@PathParam("id") int id) throws JAXBException, FileNotFoundException
 	{
-		Dozenten dozenten = new Dozenten();
+		ObjectFactory ob = new ObjectFactory();
+		Dozenten dozent = ob.createDozenten();
+		JAXBContext context = JAXBContext.newInstance(Dozenten.class);
+		Unmarshaller um = context.createUnmarshaller();
+		dozent = (Dozenten) um.unmarshal(new File("/Users/Butterfly/git/wba2_phase1/wba2-2/src/dozent1.xml"));
+		Dozenten doz = ob.createDozenten();
+		doz.getDozent().add(dozent.getDozent().get(id-1));
 		
-		try
-		{
-			JAXBContext context = JAXBContext.newInstance(Dozenten.class);
-			Unmarshaller um = context.createUnmarshaller();
-			dozenten = (Dozenten)um.unmarshal(new FileReader(xmlPath));
-		}
-		catch(Exeption e)
-		{
-			System.out.println("ERROR:" + e.getMessage()); System.exit(-1);
-		}
-		return dozenten;
+		return doz;
 	}
 }
