@@ -22,9 +22,12 @@ public class DozentenService {
 		
 		@Path("/dozenten/{id}")
 		@GET
-		public void getOne(@PathParam("id") int id)throws JAXBException, FileNotFoundException{
+		public void getOne(@PathParam("id") int id)throws JAXBException, FileNotFoundException
+		{
 			
+			//jaxb Objekt erstellen
 			JAXBContext jc = JAXBContext.newInstance(Dozenten.class);
+			//Unmarshaller, der XML-Dokumente in Java-Objekte konvertiert
 	        Unmarshaller unmarshaller = jc.createUnmarshaller();
 	        Dozenten dozent = (Dozenten) unmarshaller.unmarshal(new File("/Users/Butterfly/git/wba2_phase1/wba2-2/src/dozent1.xml"));
 	            
@@ -48,7 +51,8 @@ public class DozentenService {
 	            }
 	            	
 	            //News
-	            if(dozent.getDozent().get(id).getNewsticker().eintrag != null){
+	            if(dozent.getDozent().get(id).getNewsticker().eintrag != null)
+	            {
 	            	for(int k=0; k<dozent.getDozent().get(id).getNewsticker().getEintrag().size(); k++ )
 	            	{
 	            		System.out.println("Datum: " + dozent.getDozent().get(id).getNewsticker().getEintrag().get(k).datum);
@@ -58,9 +62,39 @@ public class DozentenService {
 	            	}
 	            }
 	           
-
+	            //Abonnenten
+	            if(dozent.getDozent().get(id).getAbonnenten().abonnent != null)
+	            {
+	            	for(int i=0; i<dozent.getDozent().get(id).getAbonnenten().getAbonnent().size(); i++)
+	            	{
+	            		 System.out.println("Abonnenten: \n");
+	            		 System.out.println("" + dozent.getDozent().get(id).getAbonnenten().abonnent);
+	            	}
+	            }
+	           
+	            
 		}
 		
+		/**Alle Dozenten anfordern
+		 * 
+		 * @return Alle Dozenten
+		 */
+		@GET
+		@Produces("application/xml")
+		public void getAll() throws JAXBException, FileNotFoundException
+		{
+			//jaxb Objekt erstellen
+			JAXBContext jc = JAXBContext.newInstance(Dozenten.class);
+			//Unmarshaller, der XML-Dokumente in Java-Objekte konvertiert
+	        Unmarshaller unmarshaller = jc.createUnmarshaller();
+	        Dozenten dozent = (Dozenten) unmarshaller.unmarshal(new File("/Users/Butterfly/git/wba2_phase1/wba2-2/src/dozent1.xml"));
+	        
+			for(int i=0; i<dozent.getDozent().size(); i++)
+			{
+				System.out.println(dozent.getDozent().get(i).getId() + ". " + dozent.getDozent().get(i).titel);
+			}
+		}
+
 		 
 	}
 }
