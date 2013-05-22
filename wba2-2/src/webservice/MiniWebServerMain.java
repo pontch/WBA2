@@ -12,6 +12,6 @@ public class MiniWebServerMain {
 		
 		System.out.println("URL:" + url);
 		Thread.sleep(1000 * 60 * 5);
-		srv.stopEndpoint();//Test
+		srv.stopEndpoint();
 	}
 }
