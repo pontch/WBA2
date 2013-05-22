@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="module">	
+		<xs:complexType>	
+			<xs:sequence>
+				<xs:element name="modul" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="titel">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="kategorie" type="xs:string" />
+											<xs:attribute name="id" type="xs:integer" />
+											<xs:attribute name="kuerzel" type="xs:string" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="status" type="xs:string"/>
+							<xs:element name="credits" type="xs:string"/>
+							<xs:element name="aufwand" type="xs:string"/>
+							<xs:element name="termin" type="xs:string"/>
+							<xs:element name="beschreibung">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="thema" minOccurs="1" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="text" minOccurs="0">
+														<xs:complexType>
+															<xs:simpleContent>
+															 <xs:extension base="xs:string">
+															 	<xs:attribute name="titel" type="xs:string" />
+															 </xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="aufzaehlung" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="punkt" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="newsticker">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="eintrag" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="datum" type="xs:date"/>
+														<xs:attribute name="verfasser" type="xs:string"/>
+														<xs:attribute name="modul" type="xs:string"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="titel" type="xs:string" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="abonnenten">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="abonnent" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="name" type="xs:string" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
