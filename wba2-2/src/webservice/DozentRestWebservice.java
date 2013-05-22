@@ -43,14 +43,14 @@ public class DozentRestWebservice {
 			
 			for(Dozent temp : dozenten.getDozent())
 			{
-				if(id == temp.getId())
+				if(id == temp.getId().intValue())
 				{
 					dozent.getDozent().add(temp);
 					return dozent;
 				}
 			}
 		}
-		catch(Exeption e)
+		catch(Exception e)
 		{
 			System.out.println("ERROR: " + e.getMessage()); System.exit(-1);
 		}
@@ -73,7 +73,7 @@ public class DozentRestWebservice {
 			Unmarshaller um = context.createUnmarshaller();
 			dozenten = (Dozenten)um.unmarshal(new FileReader(xmlPath));
 		}
-		catch(Exeption e)
+		catch(Exception e)
 		{
 			System.out.println("ERROR:" + e.getMessage()); System.exit(-1);
 		}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<mi_semester xmlns="http://www.example.org/semester">
+	<mi_semester xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="semester.xsd">
 		<semester>
 			<zeitpunkt kuerzel="SS">Studiensemester 4</zeitpunkt>
 			<modulplan>

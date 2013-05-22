@@ -4,9 +4,9 @@ import com.sun.grizzly.http.SelectorThread;
 import com.sun.jersey.api.container.grizzly.GrizzlyServerFactory;
 
 public class MiniWebServerMain {
-	public static void man(String[] args) throws Exception
+	public static void main(String[] args) throws Exception
 	{
-		String url = "http.//localhost:4434";
+		String url = "http://localhost:4434";
 		
 		SelectorThread srv = GrizzlyServerFactory.create(url);
 		

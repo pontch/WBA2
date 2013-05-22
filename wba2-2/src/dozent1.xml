@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<dozenten xmlns="http://www.example.org/dozent">
+<dozenten xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="dozenten.xsd">
 	<dozent id="1">
 		<titel kategorie="dozent" >Prof. Dr. Kristian Fischer</titel>
 		<adresse titel="Adresse">

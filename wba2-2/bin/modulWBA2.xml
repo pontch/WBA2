@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module xmlns="http://www.example.org/modul">
+<module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="module.xsd">
 	<modul>
 		<titel kategorie="modul" id="1" kuerzel="WBA2">Web-basierte Anwendungen 2: Verteilte Systeme</titel>
 		<status>Pflichtfach</status>

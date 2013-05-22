@@ -2,6 +2,7 @@ package webservice;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.math.BigInteger;
 import java.net.URI;
 
 import javax.ws.rs.Consumes;
@@ -31,66 +32,63 @@ import studenten.Studenten.Student;
 
 @Path("/studenten")
 
-public class StudentRestWebservice_2 {
+public class StudentenRestWebservice {
 	
 	private String xmlPath = "/student1.xml";
 	
 	@GET
-	@Path("/studenten/{id}")
-	@Produces("application/xml")
+	@Path("/student")
+	@Produces(MediaType.APPLICATION_XML)
 	
-	public Student getStudent() throws JAXBException, FileNotFoundException
+	public Studenten getStudent(@PathParam("id") int id) throws JAXBException, FileNotFoundException
 	{
 		ObjectFactory ob = new ObjectFactory();
 		Studenten student = ob.createStudenten();
 		JAXBContext context = JAXBContext.newInstance(Studenten.class);
 		javax.xml.bind.Unmarshaller um = context.createUnmarshaller();
 		student = (Studenten) um.unmarshal( new FileReader("xmlPath"));
-		return getStudent();
+		return student;
 	}
 
 	@GET
-	@Path("/studenten/{id}")
-	@Produces("application/xml")
-
-	
-	public Studenten getOne(@PathParam("id") int id) throws JAXBException, FileNotFoundException
+	@Path("/student/{id}")
+	@Produces(MediaType.APPLICATION_XML)
+	public Studenten getOne(@PathParam("id") String id) throws JAXBException, FileNotFoundException
 	{
-		ObjectFactory ob = new ObjectFactory();
-		Studenten student = ob.createStudenten();
+		int idNum = Integer.parseInt(id);
+		Studenten student = new Studenten();
 		JAXBContext context = JAXBContext.newInstance(Studenten.class);
 		javax.xml.bind.Unmarshaller um = context.createUnmarshaller();
 		student = (Studenten) um.unmarshal(new FileReader(xmlPath));
-		Studenten rt = ob.createStudenten();
-		rt.getStudent().add(student.getStudent().get(id-1));
-		return rt;
+		student.getStudent().add(student.getStudent().get(idNum));
+		return student;
 	}
 	
 	@POST
-	@Path("/studenten")
+	@Path("/student")
 	@Consumes(MediaType.APPLICATION_XML)
 	@Produces(MediaType.APPLICATION_XML)
 	public Studenten addOne(Studenten student)
 	{
-		Studenten Studenten = new Studenten();
+		Studenten localStudenten = new Studenten();
 		int id = 0;
 		
 		try
 		{
 			JAXBContext context = JAXBContext.newInstance(Studenten.class);
 			javax.xml.bind.Unmarshaller um = context.createUnmarshaller();
-			Studenten = (Studenten)um.unmarshal(new FileReader(xmlPath));
+			localStudenten = (Studenten)um.unmarshal(new FileReader(xmlPath));
 			
-			for(Student temp : Studenten.getStudenten())
+			for(Student temp : localStudenten.getStudent())
 			{
-				if(id <= temp.getId())
+				if(id <= temp.getId().intValue())
 				{
-					id = temp.getId()+1;
+					id = temp.getId().intValue()+1;
 				}
 			}
 			
-			student.getStudent().get(0).setId(id);
-			localStudenten.getStudent().add(studenten.getStudent().get(0));
+			student.getStudent().get(0).setId(BigInteger.valueOf(id));
+			localStudenten.getStudent().add(student.getStudent().get(0));
 			Marshaller mar = context.createMarshaller();
 			mar.setProperty(Marshaller.JAXB_ENCODING, "ISO-8859-1");
 			mar.setProperty(Marshaller.JAXB_NO_NAMESPACE_SCHEMA_LOCATION, "../student.xsd");
@@ -98,8 +96,12 @@ public class StudentRestWebservice_2 {
 			mar.marshal(localStudenten, new FileWriter(xmlPath));
 			
 			return null;
-		
-		
 		}
+		catch(Exception e)
+		{
+			
+		}
+		
+		return null;
 	}
 }

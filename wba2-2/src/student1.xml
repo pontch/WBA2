@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<studenten xmlns="http://www.example.org/student">
-		<student id="1">
-			<name kennung="mi1059">Daniela Kucharczyk</name>
-			<studiengang bezeichnung="Medieninformatik" kuerzel="MI" />
-			<semester anzahl="6"/>
-			<email adresse="daniela.kucharczyk@gmx.de" />
-			<abos titel="Abonnement">
-				<module titel="Module:">
-					<modul kuerzel="WBA2">Web-basierte Anwendungen 2: Verteilte Systeme</modul>
-					<modul kuerzel="MCI">Mensch-Computer Interaktion</modul>
-				</module>
-				<dozenten titel="Dozenten:">
-					<dozent>Prof. Dr. Wolfgang Konen</dozent>
-				</dozenten>
-			</abos>
-		</student>
-	</studenten>
+
+<studenten xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="studenten.xsd">
+	<student id="1">
+		<name kennung="mi1059">Daniela Kucharczyk</name>
+		<studiengang bezeichnung="Medieninformatik" kuerzel="MI" />
+		<semester anzahl="6"/>
+		<email adresse="daniela.kucharczyk@gmx.de" />
+		<abos titel="Abonnement">
+			<module titel="Module:">
+				<modul kuerzel="WBA2">Web-basierte Anwendungen 2: Verteilte Systeme</modul>
+				<modul kuerzel="MCI">Mensch-Computer Interaktion</modul>
+			</module>
+			<dozenten titel="Dozenten:">
+				<dozent>Prof. Dr. Wolfgang Konen</dozent>
+			</dozenten>
+		</abos>
+	</student>
+</studenten>
